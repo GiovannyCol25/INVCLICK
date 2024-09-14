@@ -1,0 +1,20 @@
+body{
+    background: #36506C;
+}
+
+header{
+    background-color: #A5DEF1;
+    padding: 1%;
+  }
+  
+  .header-button{
+    padding: 1%;
+    background-color: #36506C;
+    color: #A5DEF1;
+    font-size: 25px;
+}
+  
+  .header-button:hover{
+    background-color: royalblue;
+  }
+

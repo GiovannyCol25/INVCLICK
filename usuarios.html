@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="usuarios.css">
+    <title>Creación de usuarios</title>
+</head>
+<header>
+    <nav>
+        <button class="header-button" onclick="document.location='main.html'">Inicio</button>
+        <button class="header-button" onclick="document.location='index.html'">Log out</button>
+    </nav>
+</header>
+<body>
+    <main class="main-container">
+        <form class="form" id="create-user-form">
+            <p class="title">Register </p>
+            <div class="flex">
+                <label>
+                    <input class="input" type="text" id="firstname" placeholder="" required="">
+                    <span>Firstname</span>
+                </label>
+        
+                <label>
+                    <input class="input" type="text" id="lastname" placeholder="" required="">
+                    <span>Lastname</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input class="input" type="email" id="email" placeholder="" required="">
+                <span>Email</span>
+            </label> 
+                
+            <label>
+                <input class="input" type="number" id="document-id" placeholder="" required="">
+                <span>Document ID</span>
+            </label>
+            <label>
+                <input class="input" type="tel" id="cellphone" placeholder="" required="">
+                <span>Cellphone number</span>
+            </label>
+            <label>
+                <select id="cargo" name="cargo" required>
+                    <option value="vendedor">Vendedor</option>
+                    <option value="almacenista">Almacenista</option>
+                </select>
+            </label>
+            <label>
+                <input class="input" type="text" id="username" placeholder="" required>
+                <span>User</span>
+            </label>
+            <label>
+                <input class="input" type="password" id="password" placeholder="" required>
+                <span>Password</span>
+            </label>
+            <button class="submit" type="submit">Save</button>
+            <p id="user-info"></p>
+        </form>
+        <script src="usuarios.js"></script>
+    </main>
+</body>
+</html>
