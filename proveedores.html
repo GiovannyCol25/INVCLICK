@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="proveedores.css">
+    <title>Creación de proveedores</title>
+</head>
+<header>
+    <nav>
+        <button class="header-button" onclick="document.location='main.html'">Inicio</button>
+        <button class="header-button" onclick="document.location='index.html'">Log out</button>
+    </nav>
+</header>
+<body>
+    <main class="main-container">
+        <form class="form" id="create-supplier-form">
+            <p class="title">Register suppliers </p>
+            <div class="flex">
+                <label>
+                    <input class="input" type="text" id="company-name" placeholder="" required="">
+                    <span>Company name</span>
+                </label>
+        
+                <label>
+                    <input class="input" type="text" id="NIT" placeholder="" required="">
+                    <span>NIT</span>
+                </label>
+            </div>
+            <label>
+                <input class="input" type="tel" id="cellphone" placeholder="" required="">
+                <span>Cellphone number</span>
+            </label>
+            <label>
+                <input class="input" type="text" id="Address" placeholder="" required>
+                <span>Address</span>
+            </label>
+            <label>
+                <input class="input" type="text" id="Responsible-seller" placeholder="" required>
+                <span>Responsible seller</span>
+            </label>
+            <button class="submit" id="save-button" type="submit">Save</button>
+            <button class="submit" id="modify-button" type="button">Modify</button>
+            <p id="supplier-info"></p>
+        </form>
+        <script src="proveedores.js"></script>
+    </main>
+</body>
+</html>
