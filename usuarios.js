@@ -47,7 +47,7 @@ document.getElementById('create-user-form').addEventListener('submit', function(
         "<p><strong>Cargo:</strong> " + newUser.cargo + "</p>" +
         "<p><strong>Permisos:</strong> " + newUser.permisos + "</p>";
 
-    userInfo.style.color = "skyblue";
+    userInfo.style.color = "black";
 
     // Aquí podrías enviar `newUser` a un servidor o almacenarlo localmente si lo necesitas
     console.log(newUser);

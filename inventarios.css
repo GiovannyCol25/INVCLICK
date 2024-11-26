@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+
+}
+
+.input-group{
+  width: 10%;
+}
+
+.header-button{
+    padding: 1%;
+    background-color: #36506C;
+    color: #A5DEF1;
+    font-size: 25px;
+}
+  
+  .header-button:hover{
+    background-color: royalblue;
+  }
+  

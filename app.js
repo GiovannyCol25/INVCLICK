@@ -13,7 +13,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         // Guardar el nombre de usuario en el almacenamiento local
         localStorage.setItem('username', username);
         // Redirigir a la página de bienvenida
-        window.location.href = 'main.html';
+        window.location.href = 'main2.html';
     } else {
         errorMsg.textContent = 'Invalid username or password';
         errorMsg.style.color = 'red';

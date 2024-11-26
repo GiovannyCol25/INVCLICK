@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+
+}
+
+.input-group{
+  width: 70%;
+}
+
+.header-button{
+    padding: 1%;
+    background-color: #36506C;
+    color: #A5DEF1;
+    font-size: 25px;
+}
+  
+  .header-button:hover{
+    background-color: royalblue;
+  }
+
+  .nav-pills .nav-link {
+    background-color: #f8f9fa; /* Color de fondo inactivo */
+    color: #007bff; /* Color del texto inactivo */
+}
+
+.nav-pills .nav-link.active {
+    background-color: #007bff; /* Color de fondo activo */
+    color: #fff; /* Color del texto activo */
+}

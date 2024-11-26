@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="usuarios.css">
+    <title>Creación de usuarios</title>
+</head>
+<body class="p-3 mb-2 bg-secondary text-white">
+    <header class="p-3 mb-2 bg-dark-subtle text-dark-emphasis fixed-top">
+        <div>
+            <nav>
+                <button type="button" class="btn btn-primary" onclick="document.location='Main2.html'">Inicio</button>
+                <button type="button" class="btn btn-primary" onclick="document.location='index2.html'">Log out</button>
+            </nav>
+        </div>
+    </header>
+    <div style="margin-top: 80px;"></div>
+    <div class="container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow-lg mt-5">
+                        <div class="card-body p-3 mb-2 bg-dark-subtle text-dark-emphasis">
+                            <h2 class="card-title text-center mb-4">Register</h2>
+                            <form id="create-user-form">
+                                <div class="mb-3">
+                                    <div class="mb-3">
+                                        <label for="firstname" class="form-label">First name</label>
+                                        <input type="text" class="form-control" id="firstname" placeholder="Enter Firstname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="lastname" class="form-label">Last name</label>
+                                        <input type="text" class="form-control" id="lastname" placeholder="Enter Lastname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="document-id" class="form-label">Document Id</label>
+                                        <input type="text" class="form-control" id="document-id" placeholder="Enter Document Id">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cellphone" class="form-label">Cellphone number</label>
+                                        <input type="number" class="form-control" id="cellphone" placeholder="Enter cellphone number">
+                                    </div>
+                                    <div>
+                                        <select class="form-select" id="cargo" aria-label="Default select example">
+                                            <option selected>Seleccione el cargo</option>
+                                            <option value="1">Vendedor</option>
+                                            <option value="2">Almacenista</option>
+                                          </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                                    </div>
+                                    <div>
+                                    </div>
+                                        <button type="submit" class="btn btn-primary">SAVE</button>
+                                    </div>
+                                    <div>
+                                        <p id="user-info"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="usuarios.js"></script>
+</body>
+</html>

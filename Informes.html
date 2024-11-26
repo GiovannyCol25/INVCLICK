@@ -7,14 +7,192 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="informes.css">
     <title>Informes</title>
 </head>
-<header>
+<header class="p-3 mb-2 bg-dark-subtle text-dark-emphasis">
     <nav>
-        <a href="main.html">Inicio</a>
+        <button type="button" class="btn btn-primary" onclick="document.location='Main2.html'">Inicio</button>
     </nav>
+    <h1>Interfaz de informes</h1><br>    
 </header>
-<body>
+<body class="p-3 mb-2 bg-secondary text-white">
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Informes de Inventario y Ventas</h1>
+    
+            <!-- Navegación de pestañas -->
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-ventas-tab" data-bs-toggle="pill" data-bs-target="#pills-ventas" type="button" role="tab" aria-controls="pills-ventas" aria-selected="true">Ventas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-compras-tab" data-bs-toggle="pill" data-bs-target="#pills-compras" type="button" role="tab" aria-controls="pills-compras" aria-selected="false">Compras</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-productos-tab" data-bs-toggle="pill" data-bs-target="#pills-productos" type="button" role="tab" aria-controls="pills-productos" aria-selected="false">Productos Próximos a Vencer</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-stock-tab" data-bs-toggle="pill" data-bs-target="#pills-stock" type="button" role="tab" aria-controls="pills-stock" aria-selected="false">Alertas de Bajo Stock</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-sugerencias-tab" data-bs-toggle="pill" data-bs-target="#pills-sugerencias" type="button" role="tab" aria-controls="pills-sugerencias" aria-selected="false">Sugerencias de Compra</button>
+                </li>
+            </ul>
+    
+            <!-- Contenido de las pestañas -->
+            <div class="tab-content" id="pills-tabContent">
+                <!-- Ventas -->
+                <div class="tab-pane fade show active" id="pills-ventas" role="tabpanel" aria-labelledby="pills-ventas-tab">
+                    <h3>Informe de Ventas</h3>
+                    <label for="startDateVentas" class="form-label">Seleccione Rango de Fechas:</label>
+                    <input type="date" id="startDateVentas" class="form-control">
+                    <input type="date" id="endDateVentas" class="form-control mt-2 mb-3">
+                    <button class="btn btn-primary mb-3">Generar Informe</button>
+                    <!-- Tabla o gráfico de ventas -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Producto</th>
+                                <th>Cantidad Vendida</th>
+                                <th>Precio Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se agregarían dinámicamente los datos de las ventas -->
+                        </tbody>
+                    </table>
+                </div>
+    
+                <!-- Compras -->
+                <div class="tab-pane fade" id="pills-compras" role="tabpanel" aria-labelledby="pills-compras-tab">
+                    <h3>Informe de Compras</h3>
+                    <label for="startDateCompras" class="form-label">Seleccione Rango de Fechas:</label>
+                    <input type="date" id="startDateCompras" class="form-control">
+                    <input type="date" id="endDateCompras" class="form-control mt-2 mb-3">
+                    <button class="btn btn-primary mb-3">Generar Informe</button>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Producto</th>
+                                <th>Cantidad Comprada</th>
+                                <th>Proveedor</th>
+                                <th>Precio Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se agregarían dinámicamente los datos de las compras -->
+                        </tbody>
+                    </table>
+                </div>
+    
+                <!-- Productos Próximos a Vencer -->
+                <div class="tab-pane fade" id="pills-productos" role="tabpanel" aria-labelledby="pills-productos-tab">
+                    <h3>Productos Próximos a Vencer</h3>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Fecha de Vencimiento</th>
+                                <th>Cantidad en Inventario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se mostrarán los productos próximos a vencer -->
+                        </tbody>
+                    </table>
+                </div>
+    
+                <!-- Alertas de Bajo Stock -->
+                <div class="tab-pane fade" id="pills-stock" role="tabpanel" aria-labelledby="pills-stock-tab">
+                    <h3>Alertas de Bajo Stock</h3>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad en Inventario</th>
+                                <th>Stock Mínimo Requerido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se agregarían los productos con bajo stock -->
+                        </tbody>
+                    </table>
+                </div>
+    
+                <!-- Sugerencias de Compra -->
+                <div class="tab-pane fade" id="pills-sugerencias" role="tabpanel" aria-labelledby="pills-sugerencias-tab">
+                    <h3>Sugerencias de Compra</h3>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad Sugerida</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se agregarían sugerencias de productos a comprar -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="descargarExcel()">Descargar informe en Excel</button>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+            // Datos simulados de productos
+const productos = [
+  { nombre: 'Producto A', stock: 5, stockMin: 10, fechaVencimiento: '2024-10-01' },
+  { nombre: 'Producto B', stock: 20, stockMin: 5, fechaVencimiento: '2024-09-20' },
+  { nombre: 'Producto C', stock: 3, stockMin: 8, fechaVencimiento: '2024-12-15' }
+];
 
+// Función para obtener productos próximos a vencer
+function productosProximosAVencer(dias) {
+  const hoy = new Date();
+  return productos.filter(producto => {
+    const fechaVencimiento = new Date(producto.fechaVencimiento);
+    const diferenciaDias = (fechaVencimiento - hoy) / (1000 * 60 * 60 * 24);
+    return diferenciaDias <= dias;
+  });
+}
+
+// Función para alertas de bajo stock
+function productosBajoStock() {
+  return productos.filter(producto => producto.stock < producto.stockMin);
+}
+
+// Función para sugerencias de compra (cuando el stock está bajo)
+function sugerenciasCompra() {
+  return productos.filter(producto => producto.stock <= producto.stockMin);
+}
+
+// Mostrar informes en consola (simulando salida)
+console.log('Productos próximos a vencer en 30 días:', productosProximosAVencer(30));
+console.log('Alertas de bajo stock:', productosBajoStock());
+console.log('Sugerencias de compra:', sugerenciasCompra());
+
+// Función para descargar los informes en formato Excel
+function descargarExcel() {
+  const data = [
+    ['Nombre Producto', 'Stock', 'Stock Mínimo', 'Fecha de Vencimiento'],
+    ...productos.map(producto => [producto.nombre, producto.stock, producto.stockMin, producto.fechaVencimiento])
+  ];
+
+  let csvContent = 'data:text/csv;charset=utf-8,'
+    + data.map(e => e.join(",")).join("\n");
+
+  const encodedUri = encodeURI(csvContent);
+  const link = document.createElement("a");
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", "informe_productos.csv");
+  document.body.appendChild(link);
+
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
 </body>
 </html>
